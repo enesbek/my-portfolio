@@ -5,18 +5,17 @@ import Vue from "../assets/vue.png";
 import React from "../assets/react.png";
 import Tailwind from "../assets/tailwind.png";
 import Figma from "../assets/figma.png";
-import Git from "../assets/git.png";
 import Docker from "../assets/docker.png";
-import Java from "../assets/java.png";
-import Dotnet from "../assets/dotnetcore.png";
-import Nodejs from "../assets/nodejs.png";
 
 export const Skills = () => {
   return (
-    <div name="skills" className="w-full h-screen bg-[#0a192f] text-white">
+    <div
+      name="skills"
+      className="w-full h-screen md:px-16 bg-[#0a192f] text-white"
+    >
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div>
-          <p className="text-4xl font-bold inline border-b-4 border-orange-600 ">
+          <p className="text-4xl font-bold inline border-b-4 border-orange-600">
             Skills
           </p>
           <p className="py-4">
@@ -53,24 +52,8 @@ export const Skills = () => {
             <p>Figma</p>
           </div>
           <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img src={Git} alt="Git icon" className="w-20 mx-auto" />
-            <p>Git</p>
-          </div>
-          <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
             <img src={Docker} alt="Docker icon" className="w-20 mx-auto" />
             <p>Docker</p>
-          </div>
-          <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img src={Java} alt="Java icon" className="w-20 mx-auto" />
-            <p>Java</p>
-          </div>
-          <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img src={Dotnet} alt="Dotnet icon" className="w-20 mx-auto" />
-            <p>.NET Core</p>
-          </div>
-          <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img src={Nodejs} alt="Node.js icon" className="w-20 mx-auto" />
-            <p>Node.js</p>
           </div>
         </div>
       </div>

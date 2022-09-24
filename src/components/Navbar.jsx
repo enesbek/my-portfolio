@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
+import { Link } from "react-scroll";
+import Resume from "../assets/Resume.pdf";
+import Logo from "../assets/Logo.png";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -12,16 +15,53 @@ const Navbar = () => {
 
   return (
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-white">
-      <div>Logo</div>
+      <div>
+        <img src={Logo} width="50" />
+      </div>
 
       {/* Menu */}
       <div className="hidden md:flex">
         <ul className="hidden md:flex">
-          <li>Home</li>
-          <li>About</li>
-          <li>Skills</li>
-          <li>Experience</li>
-          <li>Contact</li>
+          <li>
+            <Link
+              to="home"
+              smooth={true}
+              duration={500}
+              className="hover:text-orange-500"
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="skills"
+              smooth={true}
+              duration={500}
+              className="hover:text-orange-500"
+            >
+              Skills
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="experience"
+              smooth={true}
+              duration={500}
+              className="hover:text-orange-500"
+            >
+              Experience
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              className="hover:text-orange-500"
+            >
+              Contact
+            </Link>
+          </li>
         </ul>
       </div>
 
@@ -38,11 +78,41 @@ const Navbar = () => {
             : "absolute top-0 left-0 w-full h-screen flex flex-col  justify-center items-center bg-[#0a192f]"
         }
       >
-        <li className="py-6 text-4xl">Home</li>
-        <li className="py-6 text-4xl">About</li>
-        <li className="py-6 text-4xl">Skills</li>
-        <li className="py-6 text-4xl">Experience</li>
-        <li className="py-6 text-4xl">Contact</li>
+        <li className="py-6 text-4xl">
+          <Link onClick={handleNavClick} to="home" smooth={true} duration={500}>
+            Home
+          </Link>
+        </li>
+        <li className="py-6 text-4xl">
+          <Link
+            onClick={handleNavClick}
+            to="skills"
+            smooth={true}
+            duration={500}
+          >
+            Skills
+          </Link>
+        </li>
+        <li className="py-6 text-4xl">
+          <Link
+            onClick={handleNavClick}
+            to="experience"
+            smooth={true}
+            duration={500}
+          >
+            Experience
+          </Link>
+        </li>
+        <li className="py-6 text-4xl">
+          <Link
+            onClick={handleNavClick}
+            to="contact"
+            smooth={true}
+            duration={500}
+          >
+            Contact
+          </Link>
+        </li>
       </ul>
 
       {/*Social icons */}
@@ -67,12 +137,19 @@ const Navbar = () => {
             </a>
           </li>
           <li className="w-[130px] h-[50px] flex justify-between items-center ml-[-80px] hover:ml-[-10px] duration-300 bg-[#DB4539]">
-            <a className="flex justify-between items-center w-full text-white">
+            <a
+              className="flex justify-between items-center w-full text-white"
+              href="mailto:enes.bek.93@gmail.com"
+            >
               Email <HiOutlineMail size={25} />
             </a>
           </li>
           <li className="w-[130px] h-[50px] flex justify-between items-center ml-[-80px] hover:ml-[-10px] duration-300 bg-green-400">
-            <a className="flex justify-between items-center w-full text-white">
+            <a
+              className="flex justify-between items-center w-full text-white"
+              href={Resume}
+              target="_blank"
+            >
               Resume <BsFillPersonLinesFill size={25} />
             </a>
           </li>
