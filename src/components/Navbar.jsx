@@ -3,7 +3,6 @@ import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { Link } from "react-scroll";
-import Resume from "../assets/Resume.pdf";
 import Logo from "../assets/Logo.png";
 
 const Navbar = () => {
@@ -16,7 +15,7 @@ const Navbar = () => {
   return (
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-white">
       <div>
-        <img src={Logo} width="50" />
+        <img src={Logo} width="50" alt="Logo png" />
       </div>
 
       {/* Menu */}
@@ -147,8 +146,8 @@ const Navbar = () => {
           <li className="w-[130px] h-[50px] flex justify-between items-center ml-[-80px] hover:ml-[-10px] duration-300 bg-green-400">
             <a
               className="flex justify-between items-center w-full text-white"
-              href={Resume}
-              download="Enes Bek - Resume"
+              href="https://github.com/enesbek/portfolio/blob/main/src/assets/Resume.pdf"
+              target="_blank"
             >
               Resume <BsFillPersonLinesFill size={25} />
             </a>
